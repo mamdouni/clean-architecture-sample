@@ -1,13 +1,13 @@
-package org.example.java.architecture.clean;
+package org.example.architecture.order.container;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CleanArchitectureApplication {
+public class CleanArchitectureOrderApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CleanArchitectureApplication.class, args);
+		SpringApplication.run(CleanArchitectureOrderApplication.class, args);
 	}
 
 }
