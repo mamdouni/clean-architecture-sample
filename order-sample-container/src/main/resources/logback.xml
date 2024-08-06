@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} [%X{userApp}] %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- No root log levels -->
+    <logger name="org.example.architecture.order" level="${APP_LOG_LEVEL:-ERROR}"/>
+
+    <!-- No root log levels only for the dev profile -->
+    <springProfile name="dev">
+        <logger name="org.springframework" level="INFO"/>
+        <logger name="org.example.architecture.order" level="DEBUG"/>
+    </springProfile>
+
+    <!-- LOG level based on environment variables -->
+    <root level="${LOG_LEVEL:-ERROR}">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

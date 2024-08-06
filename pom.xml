@@ -23,6 +23,9 @@
 
 	<properties>
 		<java.version>22</java.version>
+		<tzatziki.version>1.5.2</tzatziki.version>
+		<mapstruct.version>1.5.5.Final</mapstruct.version>
+		<testcontainers.version>1.19.8</testcontainers.version>
 	</properties>
 
 	<dependencyManagement>
@@ -42,6 +45,19 @@
 				<artifactId>order-sample-container</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<!-- Test dependencies -->
+			<dependency>
+				<groupId>com.decathlon.tzatziki</groupId>
+				<artifactId>tzatziki-spring</artifactId>
+				<version>${tzatziki.version}</version>
+				<scope>test</scope>
+				<exclusions>
+					<exclusion>
+						<groupId>org.apache.commons</groupId>
+						<artifactId>commons-text</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -51,6 +67,15 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>${mapstruct.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
 		</dependency>
 	</dependencies>
 
