@@ -14,7 +14,7 @@
     <dependencies>
         <!-- Order module dependencies -->
         <dependency>
-            <groupId>org.example.java.architecture</groupId>
+            <groupId>org.example.architecture</groupId>
             <artifactId>order-sample-core</artifactId>
         </dependency>
         <!-- Spring dependencies -->
@@ -29,6 +29,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>

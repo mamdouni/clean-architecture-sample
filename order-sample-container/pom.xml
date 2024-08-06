@@ -12,23 +12,19 @@
     <artifactId>order-sample-container</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
         <!-- Order module dependencies -->
         <dependency>
-            <groupId>org.example.java.architecture</groupId>
+            <groupId>org.example.architecture</groupId>
             <artifactId>order-sample-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.example.java.architecture</groupId>
+            <groupId>org.example.architecture</groupId>
             <artifactId>order-sample-infra</artifactId>
         </dependency>
         <!-- Spring dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <!-- Test dependencies -->
         <dependency>

@@ -25,23 +25,24 @@
 		<java.version>22</java.version>
 		<tzatziki.version>1.5.2</tzatziki.version>
 		<mapstruct.version>1.5.5.Final</mapstruct.version>
+		<lombok-mapstruct.version>0.2.0</lombok-mapstruct.version>
 		<testcontainers.version>1.19.8</testcontainers.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.example.java.architecture</groupId>
+				<groupId>org.example.architecture</groupId>
 				<artifactId>order-sample-core</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.example.java.architecture</groupId>
+				<groupId>org.example.architecture</groupId>
 				<artifactId>order-sample-infra</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.example.java.architecture</groupId>
+				<groupId>org.example.architecture</groupId>
 				<artifactId>order-sample-container</artifactId>
 				<version>${project.version}</version>
 			</dependency>
@@ -82,16 +83,32 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
-					<skip>true</skip>
-					<excludes>
-						<exclude>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+							<version>${mapstruct.version}</version>
+						</path>
+						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
+							<version>${lombok.version}</version>
+						</path>
+						<dependency>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok-mapstruct-binding</artifactId>
+							<version>${lombok-mapstruct.version}</version>
+						</dependency>
+					</annotationProcessorPaths>
+					<compilerArgs>
+						<compilerArg>
+							-Amapstruct.defaultComponentModel=spring
+						</compilerArg>
+					</compilerArgs>
 				</configuration>
 			</plugin>
 		</plugins>

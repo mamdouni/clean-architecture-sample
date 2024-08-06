@@ -14,6 +14,7 @@
     <springProfile name="dev">
         <logger name="org.springframework" level="INFO"/>
         <logger name="org.example.architecture.order" level="DEBUG"/>
+        <logger name="org.flywaydb.core.internal.dbsupport.SqlScript" level="DEBUG"/>
     </springProfile>
 
     <!-- LOG level based on environment variables -->
