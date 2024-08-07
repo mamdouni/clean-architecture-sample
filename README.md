@@ -2,6 +2,27 @@
 
 This is a sample project to demonstrate the Clean Architecture approach in Java development.
 
+## How to use the app
+
+Get products :
+http://localhost:8080/api/v1/products
+
+Create a product :
+
+```shell
+curl -X POST http://localhost:8080/api/v1/products \
+-H "Content-Type: application/json" \
+--data '{
+  "name": "Mouse",
+  "description": "a simple mouse",
+  "type": "FINISHED_GOOD",
+  "price": 100.0,
+  "priceCurrency": "USD"
+}'
+```
+
+![clean-architecture.drawio.png](images%2Fclean-architecture.drawio.png)
+
 ## References
 - https://www.youtube.com/watch?v=mbNzUkNjrnA
 - https://www.youtube.com/watch?v=LTxJFQ6xmzM

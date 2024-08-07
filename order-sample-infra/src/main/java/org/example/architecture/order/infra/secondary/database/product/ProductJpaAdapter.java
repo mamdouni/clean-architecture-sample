@@ -1,6 +1,7 @@
 package org.example.architecture.order.infra.secondary.database.product;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import org.example.architecture.order.core.application.product.ports.outputs.ProductPersistenceOutputPort;
@@ -15,9 +16,11 @@ public class ProductJpaAdapter implements ProductPersistenceOutputPort {
     private final ProductEntityMapper productEntityMapper;
 
     @Override
-    public void saveProduct(Product product) {
-        productJpaRepository.save(
-                productEntityMapper.mapDomainToEntity(product)
+    public Product saveProduct(Product product) {
+        return productEntityMapper.mapEntityToDomain(
+                productJpaRepository.save(
+                        productEntityMapper.mapDomainToEntity(product)
+                )
         );
     }
 
@@ -33,6 +36,14 @@ public class ProductJpaAdapter implements ProductPersistenceOutputPort {
         return productJpaRepository.findById(id)
                 .map(productEntityMapper::mapEntityToDomain)
                 .orElse(null);
+    }
+
+    @Override
+    public Optional<Product> findProductByName(String name) {
+
+        return productJpaRepository.findByName(name)
+                .map(productEntityMapper::mapEntityToDomain)
+                .or(Optional::empty);
     }
 
 }

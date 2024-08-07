@@ -30,3 +30,7 @@ management:
   health:
     redis:
       enabled: false
+
+application:
+  product:
+    types: FINISHED_GOOD, RAW_MATERIAL
