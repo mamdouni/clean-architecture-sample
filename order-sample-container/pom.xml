@@ -15,7 +15,7 @@
         <!-- Order module dependencies -->
         <dependency>
             <groupId>org.example.architecture</groupId>
-            <artifactId>order-sample-core</artifactId>
+            <artifactId>order-sample-business</artifactId>
         </dependency>
         <dependency>
             <groupId>org.example.architecture</groupId>

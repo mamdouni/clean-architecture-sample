@@ -3,8 +3,8 @@ package org.example.architecture.order.core.application.product.services;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.example.architecture.order.core.application.product.ports.inputs.ProductReadUseCases;
-import org.example.architecture.order.core.application.product.ports.outputs.ProductPersistenceOutputPort;
 import org.example.architecture.order.core.domain.product.Product;
+import org.example.architecture.order.core.domain.product.ports.outputs.ProductPersistenceOutputPort;
 import org.springframework.stereotype.Service;
 
 @Service

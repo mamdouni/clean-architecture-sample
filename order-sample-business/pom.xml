@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>order-sample-core</artifactId>
+    <artifactId>order-sample-business</artifactId>
 
     <dependencies>
         <dependency>

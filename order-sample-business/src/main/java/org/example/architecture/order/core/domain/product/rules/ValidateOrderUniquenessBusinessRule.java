@@ -2,9 +2,9 @@ package org.example.architecture.order.core.domain.product.rules;
 
 import java.util.function.UnaryOperator;
 import lombok.AllArgsConstructor;
-import org.example.architecture.order.core.application.product.ports.outputs.ProductPersistenceOutputPort;
 import org.example.architecture.order.core.domain.product.Product;
 import org.example.architecture.order.core.domain.product.exceptions.OrderCreationException;
+import org.example.architecture.order.core.domain.product.ports.outputs.ProductPersistenceOutputPort;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,4 +1,4 @@
-package org.example.architecture.order.core.application.product.ports.outputs;
+package org.example.architecture.order.core.domain.product.ports.outputs;
 
 import java.util.List;
 import java.util.Optional;

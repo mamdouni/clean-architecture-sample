@@ -16,7 +16,7 @@
 	<description>Demo project for Clean Architecture</description>
 
 	<modules>
-		<module>order-sample-core</module>
+		<module>order-sample-business</module>
 		<module>order-sample-infra</module>
 		<module>order-sample-container</module>
 	</modules>
@@ -33,7 +33,7 @@
 		<dependencies>
 			<dependency>
 				<groupId>org.example.architecture</groupId>
-				<artifactId>order-sample-core</artifactId>
+				<artifactId>order-sample-business</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>

@@ -31,3 +31,4 @@ curl -X POST http://localhost:8080/api/v1/products \
 - https://www.udemy.com/course/microservices-clean-architecture-ddd-saga-outbox-kafka-kubernetes/?couponCode=KEEPLEARNING
 - https://github.com/agelenler/food-ordering-system
 - https://github.com/agelenler/food-ordering-system-infra
+- https://blog.octo.com/architecture-hexagonale-trois-principes-et-un-exemple-dimplementation
