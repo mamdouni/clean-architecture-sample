@@ -21,7 +21,12 @@ curl -X POST http://localhost:8080/api/v1/products \
 }'
 ```
 
+here's a global overview of the project architecture :
+![clean-architecture-global.png](images%2Fclean-architecture-global.png)
+
+and a more detailed view of the architecture and the role of each layer:
 ![clean-architecture.drawio.png](images%2Fclean-architecture.drawio.png)
+
 
 ## References
 - https://www.youtube.com/watch?v=mbNzUkNjrnA
