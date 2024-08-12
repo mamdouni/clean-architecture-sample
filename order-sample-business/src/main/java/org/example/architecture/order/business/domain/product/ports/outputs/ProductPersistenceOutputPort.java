@@ -1,9 +1,10 @@
-package org.example.architecture.order.core.domain.product.ports.outputs;
+package org.example.architecture.order.business.domain.product.ports.outputs;
+
+import org.example.architecture.order.business.domain.product.domain.Product;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import org.example.architecture.order.core.domain.product.Product;
 
 public interface ProductPersistenceOutputPort {
     Product saveProduct(Product productPersistenceOutputData);

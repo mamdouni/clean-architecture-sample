@@ -1,14 +1,15 @@
-package org.example.architecture.order.core.application.product.services;
+package org.example.architecture.order.business.application.product.services;
+
+import lombok.AllArgsConstructor;
+import org.example.architecture.order.business.application.product.ports.inputs.CreateProductUseCase;
+import org.example.architecture.order.business.domain.product.domain.Product;
+import org.example.architecture.order.business.domain.product.ports.outputs.ProductPersistenceOutputPort;
+import org.example.architecture.order.business.domain.product.rules.ValidateOrderCreationBusinessRule;
+import org.example.architecture.order.business.domain.product.rules.ValidateOrderUniquenessBusinessRule;
+import org.example.architecture.order.business.domain.product.rules.ValidateProductTypeBusinessRule;
+import org.springframework.stereotype.Service;
 
 import java.util.UUID;
-import lombok.AllArgsConstructor;
-import org.example.architecture.order.core.application.product.ports.inputs.CreateProductUseCase;
-import org.example.architecture.order.core.domain.product.Product;
-import org.example.architecture.order.core.domain.product.ports.outputs.ProductPersistenceOutputPort;
-import org.example.architecture.order.core.domain.product.rules.ValidateOrderCreationBusinessRule;
-import org.example.architecture.order.core.domain.product.rules.ValidateOrderUniquenessBusinessRule;
-import org.example.architecture.order.core.domain.product.rules.ValidateProductTypeBusinessRule;
-import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor

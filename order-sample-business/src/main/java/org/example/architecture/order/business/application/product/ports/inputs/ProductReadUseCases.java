@@ -1,7 +1,8 @@
-package org.example.architecture.order.core.application.product.ports.inputs;
+package org.example.architecture.order.business.application.product.ports.inputs;
+
+import org.example.architecture.order.business.domain.product.domain.Product;
 
 import java.util.List;
-import org.example.architecture.order.core.domain.product.Product;
 
 public interface ProductReadUseCases {
 

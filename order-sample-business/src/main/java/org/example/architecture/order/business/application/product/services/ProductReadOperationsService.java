@@ -1,11 +1,12 @@
-package org.example.architecture.order.core.application.product.services;
+package org.example.architecture.order.business.application.product.services;
+
+import lombok.AllArgsConstructor;
+import org.example.architecture.order.business.application.product.ports.inputs.ProductReadUseCases;
+import org.example.architecture.order.business.domain.product.domain.Product;
+import org.example.architecture.order.business.domain.product.ports.outputs.ProductPersistenceOutputPort;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-import lombok.AllArgsConstructor;
-import org.example.architecture.order.core.application.product.ports.inputs.ProductReadUseCases;
-import org.example.architecture.order.core.domain.product.Product;
-import org.example.architecture.order.core.domain.product.ports.outputs.ProductPersistenceOutputPort;
-import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor

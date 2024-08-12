@@ -1,11 +1,12 @@
-package org.example.architecture.order.core.domain.product.rules;
+package org.example.architecture.order.business.domain.product.rules;
+
+import lombok.AllArgsConstructor;
+import org.example.architecture.order.business.domain.product.config.ProductTypesConfigProperties;
+import org.example.architecture.order.business.domain.product.domain.Product;
+import org.example.architecture.order.business.domain.product.exceptions.OrderCreationException;
+import org.springframework.stereotype.Service;
 
 import java.util.function.UnaryOperator;
-import lombok.AllArgsConstructor;
-import org.example.architecture.order.core.domain.product.Product;
-import org.example.architecture.order.core.domain.product.config.ProductTypesConfigProperties;
-import org.example.architecture.order.core.domain.product.exceptions.OrderCreationException;
-import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor

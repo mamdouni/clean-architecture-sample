@@ -1,4 +1,4 @@
-package org.example.architecture.order.core.domain.product.exceptions;
+package org.example.architecture.order.business.domain.product.exceptions;
 
 public class OrderCreationException extends RuntimeException{
 

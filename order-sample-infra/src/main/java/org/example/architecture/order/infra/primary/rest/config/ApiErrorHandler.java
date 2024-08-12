@@ -1,15 +1,12 @@
-package org.example.architecture.order.container.config;
+package org.example.architecture.order.infra.primary.rest.config;
 
-import java.io.Serializable;
-import java.security.SecureRandom;
-import java.util.Random;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 import lombok.extern.slf4j.Slf4j;
-import org.example.architecture.order.core.domain.product.exceptions.OrderCreationException;
-import org.example.architecture.order.core.domain.product.exceptions.OrderCurrencyException;
+import org.example.architecture.order.business.domain.product.exceptions.OrderCreationException;
+import org.example.architecture.order.business.domain.product.exceptions.OrderCurrencyException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +15,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.resource.NoResourceFoundException;
+
+import java.io.Serializable;
+import java.security.SecureRandom;
+import java.util.Random;
 
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 

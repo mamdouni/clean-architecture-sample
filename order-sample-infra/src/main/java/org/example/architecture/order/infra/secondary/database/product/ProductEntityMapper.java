@@ -1,6 +1,6 @@
 package org.example.architecture.order.infra.secondary.database.product;
 
-import org.example.architecture.order.core.domain.product.Product;
+import org.example.architecture.order.business.domain.product.domain.Product;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

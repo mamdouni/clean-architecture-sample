@@ -1,12 +1,13 @@
 package org.example.architecture.order.infra.secondary.database.product;
 
+import lombok.AllArgsConstructor;
+import org.example.architecture.order.business.domain.product.domain.Product;
+import org.example.architecture.order.business.domain.product.ports.outputs.ProductPersistenceOutputPort;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import lombok.AllArgsConstructor;
-import org.example.architecture.order.core.domain.product.ports.outputs.ProductPersistenceOutputPort;
-import org.example.architecture.order.core.domain.product.Product;
-import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor

@@ -1,9 +1,10 @@
-package org.example.architecture.order.core.domain.product;
+package org.example.architecture.order.business.domain.product.domain;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.UUID;
-import lombok.Getter;
-import lombok.Setter;
 
 @Getter
 @Setter

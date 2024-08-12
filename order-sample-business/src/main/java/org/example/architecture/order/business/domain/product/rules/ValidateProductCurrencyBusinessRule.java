@@ -1,11 +1,12 @@
-package org.example.architecture.order.core.domain.product.rules;
+package org.example.architecture.order.business.domain.product.rules;
+
+import org.example.architecture.order.business.domain.product.domain.Product;
+import org.example.architecture.order.business.domain.product.enums.PriceCurrencyEnum;
+import org.example.architecture.order.business.domain.product.exceptions.OrderCurrencyException;
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.function.UnaryOperator;
-import org.example.architecture.order.core.domain.product.Product;
-import org.example.architecture.order.core.domain.product.enums.PriceCurrencyEnum;
-import org.example.architecture.order.core.domain.product.exceptions.OrderCurrencyException;
-import org.springframework.stereotype.Service;
 
 @Service
 public class ValidateProductCurrencyBusinessRule implements UnaryOperator<Product> {
